@@ -1,3 +1,50 @@
 <!DOCTYPE html>
-<script></script>
-<html></html>
+<script>
+  //declaring variables for each product
+  let ontrack = 0;
+  let co = 0;
+  let splashkit = 0;
+  let artGallery = 0;
+  let courseFlow = 0;
+</script>
+<html>
+  <div>
+    <button
+      type="button"
+      onclick="document.getElementById('ontrack').innerHTML = 'Otrack value: ' + ontrack;"
+    >
+      Test output ontrack
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('co').innerHTML = 'CO value: ' +  co;"
+    >
+      Test output CO
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('splashkit').innerHTML = 'SplashKit value: ' + splashkit;"
+    >
+      Test output SplashKit
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('artGallery').innerHTML =  'art gallery value: ' +  artGallery;"
+    >
+      Test output art gallery
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('courseFlow').innerHTML =  'courseFlow value: ' +  courseFlow;"
+    >
+      Test output courseFlow
+    </button>
+  </div>
+</html>
+<div>
+  <p id="ontrack"></p>
+  <p id="co"></p>
+  <p id="splashkit"></p>
+  <p id="artGallery"></p>
+  <p id="courseFlow"></p>
+</div>
