@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <script>
+  const dataButtons = document.getElementsByClassName("toggle");
   //declaring variables for each product
   let ontrack = 0;
   let companyOps = 0;
@@ -7,9 +8,9 @@
   let artGallery = 0;
   let courseFlow = 0;
 
-  //toggle function. Arguments as follows: ot = ontrack, co = company operations, sk = splashkit, ag = art gallery, cf = courseflow.
-  function toggleButton(ot, co, sk, ag, cf) {
-    var button = document.getElementById("toggle");
+  //toggle function. Arguments as follows: id = array of button in ID. Should be in order. ot = ontrack, co = company operations, sk = splashkit, ag = art gallery, cf = courseflow.
+  function toggleButton(id, ot, co, sk, ag, cf) {
+    var button = document.getElementById(dataButtons[id].id);
 
     //if statement uses the value of the button color to determine wether to increase or decrease the values
     if (button.style.color === "orange") {
@@ -75,5 +76,9 @@
 </div>
 
 <h1>A couple test buttons:</h1>
-<button id="toggle" onclick="toggleButton(1,0,1,0,0)">1,0,1,0,0</button>
-<button id="toggle" onclick="toggleButton(0,0,1,1,0)">0,0,1,1,0</button>
+<button class="toggle" id="button0" onclick="toggleButton(0,1,0,1,0,0)">
+  1,0,1,0,0
+</button>
+<button class="toggle" id="button1" onclick="toggleButton(1,0,0,1,1,0)">
+  0,0,1,1,0
+</button>
